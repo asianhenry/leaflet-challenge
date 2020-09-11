@@ -39,7 +39,9 @@ var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.ge
     // Give each feature a popup describing the place and time of the earthquake
     function onEachFeature(feature, layer) {
         layer.bindPopup("<h3>" + feature.properties.place +
-        "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
+        "</h3><hr><p>" + "Time: " + new Date(feature.properties.time) + "<br></br>" 
+		+ "Magnitude: "+ feature.properties.mag + "</p>"
+		);
     }
 	
 	
